@@ -9,7 +9,7 @@
 </head>
     <body id="bg-login">
     <div class="log-1">
-      <h2>Login</h2>
+      <h2>Login <br>Beli Hp Kuyy</h2>
       <form action="" method="">
         <input type="text" name="user" placeholder="Username" class="input-control"> 
         <input type="password" name="user" placeholder="Password" class="input-control"> 

@@ -45,6 +45,14 @@
               </p>
             </a>
           </li>
+            <li class="nav-item">
+            <a href="{{ url('user') }}" class="nav-link {{checkRouteActive('admin/produk')}}">
+              <i class="nav-icon fas fa-archive"></i>
+              <p>
+                User
+              </p>
+            </a>
+          </li>
           <li class="nav-item">
             <a href="{{ url('/admin/produk') }}" class="nav-link {{checkRouteActive('admin/produk')}}">
               <i class="nav-icon fas fa-archive"></i>

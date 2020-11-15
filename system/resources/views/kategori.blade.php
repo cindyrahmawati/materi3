@@ -5,7 +5,7 @@
 <div class="card my-3">
 	<div class="container">
 		<h4>Halaman Kategori</h4>
-	</div>card-body">
+	</div>Disini Kami menyediakan beberapa jenis dan Merk Handphon yang mungkin cocok untuk anda.<br> Silahkan dipilih!!
     <div class="co
   <div class="ntainer">
     	<div class="col-12">

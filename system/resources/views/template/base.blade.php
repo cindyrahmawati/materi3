@@ -29,6 +29,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
   @include('template.section.sidebar')
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
+    <div class="contrainer">
+      <div class="row">
+        <div class="col-md-12">
+          @include('template.utils.notif')
+        </div>
+      </div>
+    </div>
     @yield('content')
     </div>
   <!-- /.content-wrapper -->

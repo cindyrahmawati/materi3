@@ -21,7 +21,7 @@
 <body class="hold-transition register-page">
 <div class="register-box">
   <div class="register-logo">
-    <a href="{{url('beranda')}}"><b>SILAHKAN REGISTRASI DAHULU</b></a>
+    <a href="{{url('beranda')}}"><b>SILAHKAN REGISTRASI TERLEBIH DAHULU</b></a>
   </div>
 
   <div class="card">
