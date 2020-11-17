@@ -6,18 +6,14 @@
 			<div class="col-md-12 mt-5">
 				<div class="card">
 					<div class="card-header">
-						Detail Data Produk
+						Detail User
 					</div>
 					<div class="card-body">
-						<h2>{{$produk->nama}}</h2>
+						<h2>{{$user->nama}}</h2>
 						<hr>
 						<p>
-							Rp. {{number_format($produk->harga)}}  |
-							Stok. {{$produk->stok}}  |
-							Berat {{$produk->berat}} gr
-						</p>
-						<p>
-							{!! nl2br($produk->deskripsi) !!}
+							{{"@".$user->username}}  |
+							Email : {{$user->email}}  
 						</p>
 					</div>
 				</div>

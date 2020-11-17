@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>TokoKu | Log in</title>
+  <title>TokoKita | Log in</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -28,7 +28,26 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">Sign in to start your session</p>
 
+        @include('template.utils.notif')
+        <tbody>
+                @foreach($list_user as $user)
+                <tr>
+                  <td>{{$loop->iteration}}</td>
+                  <td>
+                    <div class="btn-group">
+                    <a href="{{url('user', $loginProcess->id)}}" class="btn btn-dark"><i class="fa fa-info"></i></a>
+                    <a href="{{url('user', $loginProcess->id)}}/edit" class="btn btn-warning"> <i class="fa fa-edit"></i></a>
+                    @include('template.utils.delete' , ['url' => url('loginProcess', $loginProcess->id)])
+                    </div>
+                  </td>
+                  <td>{{$loginProcess->email}}</td>
+                   <td>{{$loginProcess->password}}</td>
+                  
+                </tr>
+                @endforeach
+              </tbody>
       <form action="{{url('admin/beranda')}}" method="get">
+        @csrf
         <div class="input-group mb-3">
           <input type="email" class="form-control" placeholder="Email">
           <div class="input-group-append">
