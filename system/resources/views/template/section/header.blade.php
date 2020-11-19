@@ -21,7 +21,8 @@
     <ul class="navbar-nav ml-auto">
       <!-- Messages Dropdown Menu -->
       <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">Cindy Rahmawati
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          Cindy Rahmawati
           <img src="{{ url ('public')}}/dist/img/pp.jpg" class="img-circle elevation-2" style="height: 100%" alt="User Image">
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
@@ -32,7 +33,7 @@
           <a href="#" class="dropdown-item">
             <i class="fa fa-cog"></i> Setting
           </a>
-          <a href="#" class="dropdown-item">
+          <a href="{{url('admin/logout')}}" class="dropdown-item">
             <i class="fa fa-users mr-2"></i>Log-Out
           </a>
     </ul>

@@ -29,8 +29,21 @@ Route::get('template' , [HomeController::class, 'showTemplate']);
 Route::get('admin/beranda' ,[HomeController::class, 'showAdminBeranda']);
 Route::get('admin/kategori' , [HomeController::class, 'showAdminKategori']);
 
+//kenapa disini ada 2 buah route yang sama ???
 Route::get('registrasi' , [AuthController::class, 'showRegistrasi']);
+Route::get('login' , [AuthController::class, 'showLogin']);
 Route::get('admin/registrasi' , [AuthController::class, 'showAdminRegistrasi']);
+
+
+
+Route::prefix('admin')->group(function(){
+		Route::resource('admin/produk' , ProdukController::class);
+		Route::resource('admin/kategori' , KategoriController::class);
+});
+
+Route::post('admin/produk/filter' , [ProdukController::class, 'filter']);
+Route::post('produk' , [ClientProdukController::class, 'clientfilter']);
+
 
 Route::get('admin/produk' , [ProdukController::class, 'index']);
 Route::get('admin/produk/create' , [ProdukController::class, 'create']);
@@ -48,14 +61,6 @@ Route::get('kategori/{kategori}/edit' , [KategoriController::class, 'edit']);
 Route::put('kategori/{kategori}' , [KategoriController::class, 'update']);
 Route::delete('kategori/{kategori}' , [KategoriController::class, 'destroy']);
 
-Route::get('/', [ClientProdukController::class, 'index']);
-Route::get('keranjang/{produk}', [ClientProdukController::class, 'create']);
-Route::post('keranjang', [ClientProdukController::class, 'store']);
-Route::get('detail/{produk}', [ClientProdukController::class, 'show']);
-Route::get('checkout', [ClientProdukController::class, 'checkout']);
-Route::get('checkout/ubah/{produk}', [ClientProdukController::class, 'edit']);
-Route::put('checkout/{produk}', [ClientProdukController::class, 'update']);
-Route::delete('checkout/{produk}', [ClientProdukController::class, 'destroy']);
 
 Route::get('admin/user' , [UserController::class, 'index']);
 Route::get('admin/user/create' , [UserController::class, 'create']);
@@ -69,13 +74,12 @@ Route::get('admin/login' , [AuthController::class, 'showAdminLogin']);
 Route::post('admin/login' , [AuthController::class, 'loginProcess']);
 Route::get('admin/logout' , [AuthController::class, 'logout']);
 
+Route::get('admin/registrasi' , [AuthController::class, 'showRegistrasi']);
+Route::post('admin/registrasi' , [AuthController::class, 'registrasiProcess']); 
 
-Route::get('home' , [ClientProdukController::class, 'showIndex']);
+
+
+Route::get('home' , [ClientProdukController::class, 'showHome']);
 Route::get('produk' , [ClientProdukController::class, 'showProduk']);
 Route::get('kategori' , [ClientProdukController::class, 'showKategori']);
-Route::get('detail' , [ClientProdukController::class, 'showDetail']);
-
-Route::get('login' , [AuthController::class, 'showLogin']);
-Route::post('login' , [AuthController::class, 'loginProcess']);
-
-
+Route::get('detail' , [ClientProdukController::class, 'showDetail']);  

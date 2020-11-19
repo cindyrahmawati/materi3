@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Jual Beli Laptop Online</title>
+  <title>Beli Hp Kuyy</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
@@ -83,7 +83,7 @@
           <!-- You can delete the links only if you purchased the pro version. -->
           <!-- Licensing information: https://bootstrapmade.com/license/ -->
           <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/baker-free-onepage-bootstrap-theme/ -->
-          Designed by <a>AhmadRhmndni</a>
+          Designed by <a>Cindy Rahmawati</a>
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">

@@ -29,23 +29,6 @@
       <p class="login-box-msg">Sign in to start your session</p>
 
         @include('template.utils.notif')
-        <tbody>
-                @foreach($list_user as $user)
-                <tr>
-                  <td>{{$loop->iteration}}</td>
-                  <td>
-                    <div class="btn-group">
-                    <a href="{{url('user', $loginProcess->id)}}" class="btn btn-dark"><i class="fa fa-info"></i></a>
-                    <a href="{{url('user', $loginProcess->id)}}/edit" class="btn btn-warning"> <i class="fa fa-edit"></i></a>
-                    @include('template.utils.delete' , ['url' => url('loginProcess', $loginProcess->id)])
-                    </div>
-                  </td>
-                  <td>{{$loginProcess->email}}</td>
-                   <td>{{$loginProcess->password}}</td>
-                  
-                </tr>
-                @endforeach
-              </tbody>
       <form action="{{url('admin/beranda')}}" method="get">
         @csrf
         <div class="input-group mb-3">

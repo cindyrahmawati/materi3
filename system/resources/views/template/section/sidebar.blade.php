@@ -21,11 +21,7 @@
         </div>
         <div class="info">
           <a href="{{ url('admin/beranda')}}" class="d-block">
-            @if(Auth::check())
-            {{request()->user()->nama}}
-            @else
-              Silahkan Login
-            @endif  
+         Cindy Rahmawati
           </a>
         </div>
       </div>
