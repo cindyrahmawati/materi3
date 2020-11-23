@@ -16,6 +16,10 @@ class HomeController extends Controller
 	function showKategori(){
 		return view('kategori');
 	}
+	
+	function showData(){
+		return view('data');
+	}
 
 	function showTemplate(){
 		return view('template.base');

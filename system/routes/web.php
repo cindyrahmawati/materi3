@@ -29,18 +29,19 @@ Route::get('template' , [HomeController::class, 'showTemplate']);
 Route::get('admin/beranda' ,[HomeController::class, 'showAdminBeranda']);
 Route::get('admin/kategori' , [HomeController::class, 'showAdminKategori']);
 
-//kenapa disini ada 2 buah route yang sama ???
 Route::get('registrasi' , [AuthController::class, 'showRegistrasi']);
 Route::get('login' , [AuthController::class, 'showLogin']);
 Route::get('admin/registrasi' , [AuthController::class, 'showAdminRegistrasi']);
 
 
 
-Route::prefix('admin')->group(function(){
-		Route::resource('admin/produk' , ProdukController::class);
-		Route::resource('admin/kategori' , KategoriController::class);
+Route::prefix('admin')->middleware('auth')->group(function()
+{
+	Route::resource('produk' , ProdukController::class);
+	Route::resource('kategori' , KategoriController::class);
 });
 
+//Filter
 Route::post('admin/produk/filter' , [ProdukController::class, 'filter']);
 Route::post('produk' , [ClientProdukController::class, 'clientfilter']);
 
@@ -75,11 +76,14 @@ Route::post('admin/login' , [AuthController::class, 'loginProcess']);
 Route::get('admin/logout' , [AuthController::class, 'logout']);
 
 Route::get('admin/registrasi' , [AuthController::class, 'showRegistrasi']);
-Route::post('admin/registrasi' , [AuthController::class, 'registrasiProcess']); 
+Route::post('admin/registrasi' , [AuthController::class, 'registrasiProcess']);
 
 
 
-Route::get('home' , [ClientProdukController::class, 'showHome']);
+Route::get('home' , [ClientProdukController::class, 'showIndex']);
 Route::get('produk' , [ClientProdukController::class, 'showProduk']);
 Route::get('kategori' , [ClientProdukController::class, 'showKategori']);
-Route::get('detail' , [ClientProdukController::class, 'showDetail']);  
+Route::get('detail' , [ClientProdukController::class, 'showDetail']);
+
+
+

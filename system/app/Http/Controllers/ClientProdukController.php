@@ -3,8 +3,9 @@
 
 namespace App\Http\Controllers;
 use App\Models\Produk;
-use App\Models\Kategori;
 use App\Models\ClientProduk;
+use App\Models\Kategori;
+
 
 /**
  * 
@@ -12,37 +13,36 @@ use App\Models\ClientProduk;
 class ClientProdukController extends Controller
 {
 	
-	function ShowHome()
-	{
+	function showIndex(){
 		$data['list_produk'] = Produk::all();
 		return view('home', $data);
 	}
 
-	function ShowProduk()
-	{
+	function showProduk(){
 		$data['list_produk'] = Produk::all();
 		return view('produk', $data);
 	}
 
-	function ShowDetail()
-	{
+	function showDetail(){
 		$data['list_produk'] = Produk::all();
 		return view('detail', $data);
 	}
 
-		function ShowKategori()
-	{
+	function showKategori(){
 		$data['list_kategori'] = Kategori::all();
 		return view('kategori', $data);
 	}
+
+
+
 
 	function clientfilter(){
 		$nama = request('nama');
 		$stok = explode(",", request('stok'));
 		$data['harga_min'] = $harga_min = request('harga_min');
 		$data['harga_max'] = $harga_max = request('harga_max');
-		//$data['list_produk'] = Produk::where('nama', 'like', "$nama%")->get();
-		$data['list_produk'] = Produk::whereIn('stok', $stok)->get();
+		$data['list_produk'] = Produk::where('nama', 'like', "$nama%")->get();
+		//$data['list_produk'] = Produk::whereIn('stok', $stok)->get();
 		//$data['list_produk'] = Produk::whereBetween('harga', [$harga_min, $harga_max])->get();
 		//$data['list_produk'] = Produk::where('stok', '<>', $stok)->get();
 
@@ -64,7 +64,5 @@ class ClientProdukController extends Controller
 
 	}
 
-
-
-
+	
 }

@@ -5,6 +5,7 @@ use\App\Models\Produk;
 
 class ProdukController extends Controller {
 	function index(){
+		$user = request()->user();
 		$data['list_produk'] = Produk::all();
 		return view('admin/produk.index', $data);
 	}

@@ -31,7 +31,7 @@
   <header id="header" class="fixed-top bg-dark">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="{{ url('admin/beranda') }}">Jual Beli Laptop Online</a></h1>
+      <h1 class="logo mr-auto"><a href="{{ url('admin/beranda') }}">Beli Hp Kuyy</a></h1>
       <nav class="nav-menu d-none d-lg-block ">
         <ul>
           <li class=><a href="{{ url('/home') }}">Home</a></li>
@@ -58,7 +58,7 @@
             <hr>
             <p>
               Rp. {{number_format($produk->harga)}}  |
-              Stok. { {$produk->stok}}  |
+              Stok { {$produk->stok}}  |
               Berat {{$produk->berat}} gr
             </p>
             <p>
@@ -76,7 +76,7 @@
 
       <div class="mr-md-auto text-center text-md-left">
         <div class="copyright">
-          &copy; Copyright <strong><span>Jual Beli Laptop Online</span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span>Beli Hp Kuyy</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
           <!-- All the links in the footer should remain intact. -->

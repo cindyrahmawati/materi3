@@ -5,15 +5,17 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Produk</title>
+  <title>Reccomended</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -25,21 +27,7 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Baker - v2.1.0
-  * Template URL: https://bootstrapmade.com/baker-free-onepage-bootstrap-theme/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
- <style>
-                	img{
-                		width: 300px;
-                		height: 200px;
-                		border: 4px solid #575D63;
-                		padding: 10px;
-                	</style>
-                	}
 
 <body>
    <!-- ======= Header ======= -->
@@ -58,15 +46,13 @@
 
     </div>
   </header><!-- End Header -->
-  <!-- ======= Team Section ======= -->
+<!-- ======= Team Section ======= -->
     <section id="team" class="team section-bg">
       <div class="container">
-
         <div class="section-title">
           <h2>Produk Yang Tersedia</h2>
-          <p>Kami Juga Menyediakan Beberapa Jenis Motor Yang Kami Rekomendasikan Yang Mungkin Sesuai Kebutuhan Anda, Apalagi Anda Seseorang yang Suka Bertrevelling yang suka jalan kemana-mana.</p>
+          <p>Kami Juga Menyediakan Beberapa Jenis Handphone Yang Kami Rekomendasikan Yang Mungkin Sesuai Kebutuhan Anda, Apalagi Anda Seorang Siswa Yang Mungkin Suka Bermain Game</p>
         </div>
-
         <div class="row">
           <div class="col-md-3">
             <div class="card">
@@ -98,24 +84,21 @@
             </div>
           </div>
           @foreach($list_produk as $produk)
-
-			  <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <div class="member-img">
-                <a href="{{url('/detail')}}">
-                 <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
-                 <img src="assets/img/team/team-4.jpg" class="img-fluid" alt=""> 
-                 <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
-                  <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+           <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
+             <div class="member">
+                <div class="member-img">
+                    <a href="{{url('/detail')}}">
+                        <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                    </div>
+                <div class="member-info">
+                    <h5>{{$produk->nama}}</h5>
+                    <span>Rp {{number_format($produk->harga)}}</span>
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div class="member-info">
-                <h4>{{$produk->nama}}</h4>
-                <span> Rp.{{number_format($produk->harga)}}</span>
-                </a>
-              </div>
-            </div>
-          </div>
           @endforeach
+        </div>
     </section><!-- End Team Section -->
 
     <!-- ======= Footer ======= -->
@@ -126,8 +109,7 @@
           &copy; Copyright <strong><span>Beli Hp Kuyy</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-          
-          Designed by <a>Cindy Rahmawati</a>
+          Designed by <a>CindyRahmawati</a>
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
@@ -155,6 +137,10 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+<script>
+  $(".table-datatable").DataTable();
+</script>
 
   </body>
 
